@@ -3,7 +3,7 @@
 Write-Verbose "SSRS Config"
 
 function Get-ConfigSet() {
-    return Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_SSRS\v14\Admin" -class MSReportServer_ConfigurationSetting -ComputerName localhost
+    return Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_SSRS\v15\Admin" -class MSReportServer_ConfigurationSetting -ComputerName localhost
 }
 
 # Allow importing of sqlps module
@@ -63,7 +63,7 @@ If (! $configset.IsInitialized) {
     $configset.ListReportServersInDatabase()
     $configset.ListReservedUrls();
 
-    $inst = Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_SSRS\v14" -class MSReportServer_Instance -ComputerName localhost
+    $inst = Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_SSRS\v15" -class MSReportServer_Instance -ComputerName localhost
 
     $inst.GetReportServerUrls()
 }
