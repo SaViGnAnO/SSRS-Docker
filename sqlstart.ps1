@@ -1,6 +1,7 @@
 # The script sets the sa password and start the SQL Service
 # Also it attaches additional database from the disk
-# The format for attach_dbs
+# The format for attach_dbs:
+# [{"dbName":"myDB","dbFiles":["c:\\temp\\myDB.mdf","c:\\temp\\myDB.ldf"]}]
 
 param(
     [Parameter(Mandatory = $false)]

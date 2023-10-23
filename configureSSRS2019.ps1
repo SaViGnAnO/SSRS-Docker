@@ -1,7 +1,5 @@
 <#
 #>
-Write-Verbose "SSRS Config"
-
 function Get-ConfigSet() {
     return Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_SSRS\v15\Admin" -class MSReportServer_ConfigurationSetting -ComputerName localhost
 }

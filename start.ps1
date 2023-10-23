@@ -22,7 +22,7 @@ param(
 
 
 Write-Verbose "SSRS Config"
-.\configureSSRS2017 -Verbose
+.\configureSSRS2019 -Verbose
 
 .\newadmin -username $ssrs_user -password $ssrs_password -Verbose
 
